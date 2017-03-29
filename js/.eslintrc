@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "google": false,
+    "usr": true,
+    "wp": false
+  },
+  "parser": "babel-eslint",
+  "root": true
+}
