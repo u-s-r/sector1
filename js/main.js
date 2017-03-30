@@ -1,5 +1,5 @@
 (function( $ ) {
 	'use strict';
 
-	$.noop();
+	$( '.context-height .eq-height' ).matchHeight();
 })( jQuery );
