@@ -68,6 +68,19 @@
 .section-intro .navbar {
   margin-bottom: 60px;
 }
+.section-intro .section-header {
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .section-intro .section-header {
+    font-size: 36px;
+    margin-bottom: 0;
+  }
+}
+.section-intro .img-responsive {
+  width: 100%;
+}
 .section-map .page-header {
   margin-top: 90px;
 }
