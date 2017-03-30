@@ -132,7 +132,7 @@
     "@screen-md-max": "(@screen-lg-min - 1)",
     "@grid-columns": "12",
     "@grid-gutter-width": "30px",
-    "@grid-float-breakpoint": "@screen-sm-min",
+    "@grid-float-breakpoint": "@screen-md-min",
     "@grid-float-breakpoint-max": "(@grid-float-breakpoint - 1)",
     "@container-tablet": "(720px + @grid-gutter-width)",
     "@container-sm": "@container-tablet",
@@ -159,9 +159,9 @@
     "@navbar-default-brand-color": "@navbar-default-link-color",
     "@navbar-default-brand-hover-color": "darken(@navbar-default-brand-color, 10%)",
     "@navbar-default-brand-hover-bg": "transparent",
-    "@navbar-default-toggle-hover-bg": "darken(@navbar-default-bg, 6.5%)",
+    "@navbar-default-toggle-hover-bg": "transparent",
     "@navbar-default-toggle-icon-bar-bg": "#fff",
-    "@navbar-default-toggle-border-color": "darken(@navbar-default-bg, 6.5%)",
+    "@navbar-default-toggle-border-color": "transparent",
     "@navbar-inverse-color": "lighten(@gray-light, 15%)",
     "@navbar-inverse-bg": "#222",
     "@navbar-inverse-border": "darken(@navbar-inverse-bg, 10%)",
@@ -431,5 +431,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=bdf419dff89177f42b4655204f2c2f50"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=a9f89a51ecb9c39291d19ef01325416b"
 }
