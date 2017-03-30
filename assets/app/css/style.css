@@ -78,9 +78,6 @@
     margin-bottom: 0;
   }
 }
-.section-intro .img-responsive {
-  width: 100%;
-}
 .section-map .page-header {
   margin-top: 90px;
 }
@@ -99,6 +96,9 @@
 .panel-activity .panel-body {
   padding: 60px 60px 140px;
 }
+.img-responsive {
+  width: 100%;
+}
 .mosaic {
   display: block;
   margin-bottom: -150px;
@@ -110,7 +110,13 @@
 }
 .divider {
   border-top-width: 2px;
+  margin-left: 0;
+  margin-right: 0;
   width: 160px;
+}
+.divider-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer {
   color: #00a0e8;
