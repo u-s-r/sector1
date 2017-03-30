@@ -111,6 +111,12 @@ module.exports = function( grunt ) {
 						cwd: 'node_modules/jquery/dist',
 						src: '*',
 						dest: 'assets/vendor/jquery'
+					},
+					{
+						expand: true,
+						cwd: 'node_modules/jquery-match-height/dist',
+						src: '*',
+						dest: 'assets/vendor/jquery-match-height'
 					}
 				]
 			}
@@ -143,7 +149,8 @@ module.exports = function( grunt ) {
 				force: true
 			},
 			assets: [
-				'assets/vendor/jquery'
+				'assets/vendor/jquery',
+				'assets/vendor/jquery-match-height'
 			],
 			css: 'assets/app/css',
 			js: 'assets/app/js'
