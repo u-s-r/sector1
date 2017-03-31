@@ -117,6 +117,12 @@ module.exports = function( grunt ) {
 						cwd: 'node_modules/jquery-match-height/dist',
 						src: '*',
 						dest: 'assets/vendor/jquery-match-height'
+					},
+					{
+						expand: true,
+						cwd: 'node_modules/slick-carousel/slick',
+						src: '**',
+						dest: 'assets/vendor/slick'
 					}
 				]
 			}
@@ -150,7 +156,8 @@ module.exports = function( grunt ) {
 			},
 			assets: [
 				'assets/vendor/jquery',
-				'assets/vendor/jquery-match-height'
+				'assets/vendor/jquery-match-height',
+				'assets/vendor/slick'
 			],
 			css: 'assets/app/css',
 			js: 'assets/app/js'
