@@ -10,6 +10,20 @@
 	align-self: center;
 }
 
+.rail {
+	background-color: red;
+	position: absolute;
+	top: 0;
+	width: 200px;
+}
+
+.rail-left {
+	left: auto;
+	margin-right: 15px;
+	padding-right: 15px;
+	right: 100%;
+}
+
 .navbar {
 	border: 0;
 }
@@ -101,9 +115,15 @@
 	margin-bottom: 60px;
 }
 
-.entry-title > small {
-	display: block;
-	margin-bottom: 1em;
+.entry-title {
+	&:first-child {
+		margin-top: 0;
+	}
+
+	> small {
+		display: block;
+		margin-bottom: 1em;
+	}
 }
 
 .panel {
@@ -149,12 +169,16 @@
 	border-top-width: 2px;
 	margin-left: 0;
 	margin-right: 0;
-	width: 160px;
+	max-width: 160px;
 }
 
 .divider-center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.divider-danger {
+	border-color: #f41215;
 }
 
 .list {
