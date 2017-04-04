@@ -55,15 +55,17 @@
 .navbar-toggle.collapsed .bar-middle {
   opacity: 1;
 }
+.img-responsive {
+  width: 100%;
+}
 .section {
-  padding-bottom: 60px;
-  padding-top: 60px;
+  margin-bottom: 60px;
 }
 .section-intro {
   background: #5e6d7b url("../img/hero-bg.jpg") center center no-repeat;
   background-size: cover;
   color: #fff;
-  padding-top: 0;
+  padding-bottom: 60px;
 }
 .section-intro .navbar {
   margin-bottom: 60px;
@@ -86,6 +88,9 @@
 .text-danger {
   color: #f41215;
 }
+.entry {
+  margin-bottom: 60px;
+}
 .entry-title > small {
   display: block;
   margin-bottom: 1em;
@@ -95,19 +100,38 @@
   box-shadow: none;
 }
 .panel-activity .panel-body {
-  padding: 60px 60px 140px;
+  padding-bottom: 60px;
 }
-.img-responsive {
-  width: 100%;
+@media (min-width: 480px) and (max-width: 767px) {
+  .panel-activity .panel-body {
+    padding-bottom: 90px;
+  }
 }
-.mosaic {
+@media (min-width: 768px) {
+  .panel-activity .panel-body {
+    padding: 60px 60px 140px;
+  }
+}
+.activity-mosaic {
   display: block;
-  margin-bottom: -150px;
+  margin-bottom: -60px;
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
   position: relative;
-  top: -150px;
+  top: -60px;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .activity-mosaic {
+    margin-bottom: -90px;
+    top: -90px;
+  }
+}
+@media (min-width: 768px) {
+  .activity-mosaic {
+    margin-bottom: -150px;
+    top: -150px;
+  }
 }
 .divider {
   border-top-width: 2px;
@@ -121,6 +145,7 @@
 }
 .list {
   list-style: none;
+  padding-left: 0;
 }
 .list li {
   padding-left: 1.5em;
@@ -133,12 +158,34 @@
   position: absolute;
   top: 0;
 }
-.list-relaxed li {
-  margin-bottom: 1em;
+.list-checkbox {
+  color: #999;
+  padding-left: 0;
+}
+.list-checkbox li {
+  margin-bottom: 20px;
+  padding-left: 2em;
+}
+.list-checkbox li:before {
+  background-image: url("../img/sprite-checkbox.png");
+  background-repeat: none;
+  background-size: 1em auto;
+  height: 1em;
+  top: 2px;
+  width: 1em;
+}
+.list-checkbox li.checked {
+  color: #00a0e8;
+}
+.list-checkbox li.checked:before {
+  background-position: left bottom;
 }
 .list-bulleted li:before {
   color: #f41215;
   content: "\25cf";
+}
+.list-relaxed li {
+  margin-bottom: 10px;
 }
 .footer {
   color: #00a0e8;
