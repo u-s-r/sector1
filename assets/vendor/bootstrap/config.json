@@ -10,7 +10,7 @@
     "@brand-success": "#5cb85c",
     "@brand-info": "#5bc0de",
     "@brand-warning": "#f0ad4e",
-    "@brand-danger": "#e70022",
+    "@brand-danger": "#f41215",
     "@body-bg": "#fff",
     "@text-color": "@gray-dark",
     "@link-color": "@brand-primary",
@@ -226,7 +226,7 @@
     "@state-warning-text": "#8a6d3b",
     "@state-warning-bg": "#fcf8e3",
     "@state-warning-border": "darken(spin(@state-warning-bg, -10), 5%)",
-    "@state-danger-text": "#a94442",
+    "@state-danger-text": "#f41215",
     "@state-danger-bg": "#f2dede",
     "@state-danger-border": "darken(spin(@state-danger-bg, -10), 5%)",
     "@tooltip-max-width": "200px",
@@ -431,5 +431,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=a9f89a51ecb9c39291d19ef01325416b"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=e4df3bef21a9fa9baab9aa88063894c2"
 }
