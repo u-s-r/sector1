@@ -11,6 +11,21 @@ if ( 'undefined' === typeof window.usr ) {
 (function( $ ) {
 	'use strict';
 
+	var timer;
+	var $fb = $( '.fb-page' );
+
+	$( window ).on( 'load resize', function() {
+		if ( ! timer ) {
+			timer = setTimeout( function() {
+				$fb.attr( 'data-width', $fb.width() );
+
+				FB.XFBML.parse();
+
+				timer = null;
+			}, 300 );
+		}
+	} );
+
 	$( '.context-height .eq-height' ).matchHeight();
 
 	$( '.carousel' ).slick({

@@ -5,6 +5,7 @@
   },
   "extends": "eslint:recommended",
   "globals": {
+    "FB": false,
     "google": false,
     "usr": true,
     "wp": false

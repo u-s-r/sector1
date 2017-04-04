@@ -86,6 +86,10 @@
 .text-danger {
   color: #f41215;
 }
+.entry-title > small {
+  display: block;
+  margin-bottom: 1em;
+}
 .panel {
   border-width: 8px;
   box-shadow: none;
@@ -129,6 +133,9 @@
   position: absolute;
   top: 0;
 }
+.list-relaxed li {
+  margin-bottom: 1em;
+}
 .list-bulleted li:before {
   color: #f41215;
   content: "\25cf";
@@ -142,5 +149,8 @@
 }
 .footer strong {
   color: #6396ad;
+}
+.fb-page {
+  display: block !important;
 }
 /*# sourceMappingURL=style.css.map */
