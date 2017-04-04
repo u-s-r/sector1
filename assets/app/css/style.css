@@ -84,7 +84,7 @@
   text-transform: uppercase;
 }
 .text-danger {
-  color: #e70022;
+  color: #f41215;
 }
 .panel {
   border-width: 8px;
@@ -114,6 +114,24 @@
 .divider-center {
   margin-left: auto;
   margin-right: auto;
+}
+.list {
+  list-style: none;
+}
+.list li {
+  padding-left: 1.5em;
+  position: relative;
+}
+.list li:before {
+  content: "";
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.list-bulleted li:before {
+  color: #f41215;
+  content: "\25cf";
 }
 .footer {
   color: #00a0e8;
