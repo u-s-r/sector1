@@ -108,14 +108,14 @@
   border: 20px solid #f41215;
   border-right-color: transparent;
   border-top-color: transparent;
-  bottom: 0;
+  bottom: 10px;
   content: "";
   display: block;
   left: 0;
   position: absolute;
 }
 .read-more:after {
-  bottom: 4px;
+  bottom: 14px;
   color: #fff;
   content: "\2192";
   font-weight: 200;
