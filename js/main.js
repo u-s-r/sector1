@@ -20,6 +20,7 @@
 
 	$( '.carousel' ).slick({
 		arrows: false,
+		autoplay: true,
 		responsive: [
 			{
 				breakpoint: 768,

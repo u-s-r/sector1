@@ -30,6 +30,7 @@ if ( 'undefined' === typeof window.usr ) {
 
 	$( '.carousel' ).slick({
 		arrows: false,
+		autoplay: true,
 		responsive: [
 			{
 				breakpoint: 768,
