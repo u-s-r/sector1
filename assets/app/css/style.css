@@ -15,17 +15,17 @@
   -ms-grid-row-align: center;
   align-self: center;
 }
-.rail {
-  background-color: red;
-  position: absolute;
-  top: 0;
-  width: 200px;
+.col-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
-.rail-left {
-  left: auto;
-  margin-right: 15px;
-  padding-right: 15px;
-  right: 100%;
+.col-flex .align-bottom {
+  margin-top: auto;
 }
 .navbar {
   border: 0;
@@ -97,8 +97,31 @@
   font-weight: 300;
   text-transform: uppercase;
 }
-.text-danger {
-  color: #f41215;
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+}
+.read-more:before {
+  border: 20px solid #f41215;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+}
+.read-more:after {
+  bottom: 4px;
+  color: #fff;
+  content: "\2192";
+  font-weight: 200;
+  left: 8px;
+  line-height: 1;
+  position: absolute;
 }
 .entry {
   margin-bottom: 60px;
@@ -152,7 +175,7 @@
   border-top-width: 2px;
   margin-left: 0;
   margin-right: 0;
-  max-width: 160px;
+  max-width: 180px;
 }
 .divider-center {
   margin-left: auto;
