@@ -150,6 +150,9 @@
 .entry {
   margin-bottom: 60px;
 }
+.entry-compact {
+  margin-bottom: 20px;
+}
 .entry-title:first-child {
   margin-top: 0;
 }
