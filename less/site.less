@@ -1,3 +1,10 @@
+.container-absolute-top {
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 @media ( min-width: 768px ) {
 	.row-md-eq {
 		display: flex;
@@ -75,15 +82,38 @@
 	margin-bottom: 60px;
 }
 
+.section-carousel.slick-dotted.slick-slider {
+	margin-bottom: 60px;
+
+	.slick-arrow {
+		z-index: 10;
+	}
+
+	.slick-prev {
+		left: 15px;
+	}
+
+	.slick-next {
+		right: 15px;
+	}
+
+	.slick-dots {
+		bottom: 15px;
+
+		li button:before,
+		li.slick-active button:before {
+			color: #fff;
+		}
+	}
+}
+
 .section-intro {
 	background: #5e6d7b url('../img/hero-bg.jpg') center center no-repeat;
 	background-size: cover;
 	color: #fff;
+	margin-bottom: 0;
 	padding-bottom: 60px;
-
-	.navbar {
-		margin-bottom: 60px;
-	}
+	padding-top: 140px;
 
 	.section-header {
 		font-size: 24px;

@@ -18,7 +18,20 @@
 
 	$( '.context-height .eq-height' ).matchHeight();
 
-	$( '.carousel' ).slick({
+	$( '.section-carousel' ).slick({
+		autoplay: true,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false
+				}
+			}
+		]
+	});
+
+	$( '.column-carousel' ).slick({
 		arrows: false,
 		autoplay: true,
 		responsive: [
