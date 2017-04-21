@@ -136,6 +136,11 @@
     margin-bottom: 0;
   }
 }
+.section-map {
+  background-color: #5e6d7b;
+  height: 640px;
+  padding-top: 140px;
+}
 .label {
   border-radius: 0;
   font-weight: 300;
