@@ -79,11 +79,34 @@
 }
 
 .section {
-	margin-bottom: 60px;
+	padding-bottom: 60px;
+	padding-top: 60px;
+}
+
+.section-alt {
+	background-color: #ebf1f2;
+}
+
+.section-primary {
+	background-color: #009eeb;
+	color: #fff;
+
+	a {
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			color: #ccecfa;
+		}
+	}
+
+	.divider {
+		border-color: #0088ca;
+	}
 }
 
 .section-carousel.slick-dotted.slick-slider {
-	margin-bottom: 60px;
+	margin-bottom: 0;
 
 	.slick-arrow {
 		z-index: 10;
@@ -112,7 +135,6 @@
 	background-size: cover;
 	color: #fff;
 	margin-bottom: 0;
-	padding-bottom: 60px;
 	padding-top: 140px;
 
 	.section-header {
@@ -185,40 +207,6 @@
 .panel {
 	border-width: 8px;
 	box-shadow: none;
-}
-
-.panel-activity {
-	.panel-body {
-		padding-bottom: 60px;
-
-		@media ( min-width: 480px ) and ( max-width: 767px ) {
-			padding-bottom: 90px;
-		}
-
-		@media ( min-width: 768px ) {
-			padding: 60px 60px 140px;
-		}
-	}
-}
-
-.activity-mosaic {
-	display: block;
-	margin-bottom: -60px;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 80%;
-	position: relative;
-	top: -60px;
-
-	@media ( min-width: 480px ) and ( max-width: 767px ) {
-		margin-bottom: -90px;
-		top: -90px;
-	}
-
-	@media ( min-width: 768px ) {
-		margin-bottom: -150px;
-		top: -150px;
-	}
 }
 
 .divider {
@@ -298,15 +286,29 @@
 }
 
 .footer {
-	color: #00a0e8;
+	background-color: #0088ca;
+	color: #fff;
 	text-align: center;
+
+	a {
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			color: #ccecfa;
+		}
+	}
+
+	strong {
+		color: #ebf1f2;
+	}
 
 	.section-title {
 		font-size: 80px;
 	}
 
-	strong {
-		color: #6396ad;
+	.divider {
+		border-color: #ebf1f2;
 	}
 }
 
