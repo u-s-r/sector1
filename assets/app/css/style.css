@@ -33,6 +33,9 @@
 .col-flex .align-bottom {
   margin-top: auto;
 }
+.btn {
+  border: 0;
+}
 .navbar {
   border: 0;
 }
@@ -260,6 +263,14 @@
 }
 .footer .text-muted {
   color: #80d0f4;
+}
+.footer .btn-default {
+  color: #0088ca;
+}
+.footer .btn-default:hover,
+.footer .btn-default:focus {
+  background-color: #ccecfa;
+  color: #0088ca;
 }
 .fb-page {
   display: block !important;
