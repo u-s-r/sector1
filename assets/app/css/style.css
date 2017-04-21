@@ -252,16 +252,38 @@
 .footer a:focus {
   color: #ccecfa;
 }
-.footer strong {
-  color: #ebf1f2;
-}
 .footer .section-title {
   font-size: 80px;
 }
 .footer .divider {
-  border-color: #ebf1f2;
+  border-color: #009eeb;
+}
+.footer .text-muted {
+  color: #80d0f4;
 }
 .fb-page {
   display: block !important;
+}
+.follow-us {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+.follow-us .list-inline {
+  font-size: 75%;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.follow-us a {
+  color: inherit;
+}
+.follow-us a:hover,
+.follow-us a:focus {
+  text-decoration: none;
+}
+.follow-us img {
+  display: block;
+  margin: 0 auto 5px;
+  max-width: 28px;
 }
 /*# sourceMappingURL=style.css.map */
