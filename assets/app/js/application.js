@@ -296,7 +296,7 @@ if ( 'undefined' === typeof window.usr ) {
 			var projection = this.getProjection();
 			var center = projection.fromLatLngToContainerPixel( bounds.getCenter() );
 
-			center.y -= 60;
+			center.y -= 40;
 
 			mymap.setCenter( projection.fromContainerPixelToLatLng( center ) );
 		};
