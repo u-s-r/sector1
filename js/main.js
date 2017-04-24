@@ -54,15 +54,14 @@
 		slidesToShow: 3
 	});
 
-	function addMarker( feature, map ) {
+	function addMarker( position, map ) {
 		new google.maps.Marker({
-			position: feature.position,
+			position: position,
 			map: map,
 			icon: {
 				url: usr.map.icon,
 				scaledSize: new google.maps.Size( 96, 96 )
-			},
-			title: feature.title
+			}
 		});
 	}
 
@@ -74,24 +73,27 @@
 			},
 			disableDefaultUI: true,
 			scrollwheel: false,
-			styles: [{
+			styles: [
+				{
 					'featureType': 'all',
 					'elementType': 'labels.text.fill',
-					'stylers': [{
+					'stylers': [
+						{
 							'saturation': 36
 						},
 						{
 							'color': '#5e6d7b'
 						},
 						{
-							'lightness': 40
+							'lightness': 80
 						}
 					]
 				},
 				{
 					'featureType': 'all',
 					'elementType': 'labels.text.stroke',
-					'stylers': [{
+					'stylers': [
+						{
 							'visibility': 'on'
 						},
 						{
@@ -108,108 +110,147 @@
 					'stylers': [{
 						'visibility': 'off'
 					}]
-				}, {
+				},
+				{
 					'featureType': 'administrative',
 					'elementType': 'geometry.fill',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 20
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 20
+						}
+					]
+				},
+				{
 					'featureType': 'administrative',
 					'elementType': 'geometry.stroke',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 17
-					}, {
-						'weight': 1.2
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 17
+						},
+						{
+							'weight': 1.2
+						}
+					]
+				},
+				{
 					'featureType': 'landscape',
 					'elementType': 'geometry',
-					'stylers': [{
+					'stylers': [
+						{
 						'color': '#5e6d7b'
-					}, {
-						'lightness': 20
-					}]
-				}, {
+						},
+						{
+							'lightness': 20
+						}
+					]
+				},
+				{
 					'featureType': 'poi',
 					'elementType': 'geometry',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 21
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 21
+						}
+					]
+				},
+				{
 					'featureType': 'road.highway',
 					'elementType': 'geometry.fill',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 17
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 17
+						}
+					]
+				},
+				{
 					'featureType': 'road.highway',
 					'elementType': 'geometry.stroke',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 29
-					}, {
-						'weight': 0.2
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 29
+						},
+						{
+							'weight': 0.2
+						}
+					]
+				},
+				{
 					'featureType': 'road.arterial',
 					'elementType': 'geometry',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 18
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 18
+						}
+					]
+				},
+				{
 					'featureType': 'road.local',
 					'elementType': 'geometry',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 16
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 16
+						}
+					]
+				},
+				{
 					'featureType': 'transit',
 					'elementType': 'geometry',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 19
-					}]
-				}, {
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 19
+						}
+					]
+				},
+				{
 					'featureType': 'water',
 					'elementType': 'geometry',
-					'stylers': [{
-						'color': '#5e6d7b'
-					}, {
-						'lightness': 17
-					}]
+					'stylers': [
+						{
+							'color': '#5e6d7b'
+						},
+						{
+							'lightness': 17
+						}
+					]
 				}
 			],
 			zoom: 1,
 			zoomControl: true
 		});
 
-		var i,
-			overlay = new google.maps.OverlayView(),
-			bounds = new google.maps.LatLngBounds();
+		var overlay = new google.maps.OverlayView();
+		var bounds = new google.maps.LatLngBounds();
 
-		for ( i = 0; i < usr.map.markers.length; i++ ) {
-			addMarker( usr.map.markers[ i ], map );
+		addMarker( usr.map.position, map );
 
-			bounds.extend( new google.maps.LatLng(
-				usr.map.markers[ i ].position.lat,
-				usr.map.markers[ i ].position.lng
-			) );
-		}
+		bounds.extend( new google.maps.LatLng(
+			usr.map.position.lat,
+			usr.map.position.lng
+		) );
 
 		overlay.draw = function() {};
 

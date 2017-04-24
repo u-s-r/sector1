@@ -7,13 +7,9 @@ if ( 'undefined' === typeof window.usr ) {
 
 	usr.map = {
 		icon: '../assets/app/img/icon-marker.png',
-		markers: [
-			{
-				position: {
-					lat: 44.4373056,
-					lng: 26.0660234
-				}
-			}
-		]
+		position: {
+			lat: 44.4373056,
+			lng: 26.0660234
+		}
 	};
 })( usr );
