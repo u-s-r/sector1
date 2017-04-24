@@ -6,10 +6,9 @@ if ( 'undefined' === typeof window.usr ) {
 	'use strict';
 
 	usr.map = {
-		icon: '../assets/app/img/icon-marker.png',
 		position: {
-			lat: 44.4373056,
-			lng: 26.0660234
+			lat: 44.435672,
+			lng: 26.068465
 		}
 	};
 })( usr );

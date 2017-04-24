@@ -6,10 +6,9 @@ if ( 'undefined' === typeof window.usr ) {
 	'use strict';
 
 	usr.map = {
-		icon: '../assets/app/img/icon-marker.png',
 		position: {
-			lat: 44.4373056,
-			lng: 26.0660234
+			lat: 44.435672,
+			lng: 26.068465
 		}
 	};
 })( usr );
@@ -70,24 +69,15 @@ if ( 'undefined' === typeof window.usr ) {
 		slidesToShow: 3
 	});
 
-	function addMarker( position, map ) {
-		new google.maps.Marker({
-			position: position,
-			map: map,
-			icon: {
-				url: usr.map.icon,
-				scaledSize: new google.maps.Size( 96, 96 )
-			}
-		});
-	}
-
 	window.initMap = function() {
-		var map = new google.maps.Map( document.getElementById( 'usr-map' ), {
+		var mymap = new google.maps.Map( document.getElementById( 'usr-map' ), {
 			center: {
 				lat: 0,
 				lng: 0
 			},
 			disableDefaultUI: true,
+			disableDoubleClickZoom: true,
+			draggable: false,
 			scrollwheel: false,
 			styles: [
 				{
@@ -254,33 +244,67 @@ if ( 'undefined' === typeof window.usr ) {
 					]
 				}
 			],
-			zoom: 1,
-			zoomControl: true
+			zoom: 1
 		});
 
-		var overlay = new google.maps.OverlayView();
 		var bounds = new google.maps.LatLngBounds();
-
-		addMarker( usr.map.position, map );
-
-		bounds.extend( new google.maps.LatLng(
+		var latlng = new google.maps.LatLng(
 			usr.map.position.lat,
 			usr.map.position.lng
-		) );
+		);
 
-		overlay.draw = function() {};
+		function CustomMarker( latlng, map, args ) {
+			this.latlng = latlng;
+			this.args = args;
+			this.setMap( map );
+		}
 
-		overlay.onAdd = function() {
-			var center, projection = this.getProjection();
+		CustomMarker.prototype = new google.maps.OverlayView();
 
-			center    = projection.fromLatLngToContainerPixel( bounds.getCenter() );
-			center.y -= 60;
+		CustomMarker.prototype.draw = function() {
+			var marker = this.marker;
+			var pin = this.pin;
+			var panes = this.getPanes();
+			var point = this.getProjection().fromLatLngToDivPixel( this.latlng );
 
-			map.setCenter( projection.fromContainerPixelToLatLng( center ) );
+			if ( ! marker ) {
+				marker = this.marker = document.createElement( 'div' );
+
+				marker.className = 'mymarker';
+
+				pin = this.pin = marker.cloneNode();
+				pin.className = 'mypin';
+
+				panes.overlayImage.appendChild( marker );
+				panes.overlayImage.appendChild( pin );
+			}
+
+			if ( point ) {
+				marker.style.left = point.x + 'px';
+				marker.style.top  = point.y + 'px';
+
+				pin.style.left = point.x + 'px';
+				pin.style.top  = point.y + 'px';
+			}
 		};
 
-		overlay.setMap( map );
+		CustomMarker.prototype.getPosition = function() {
+			return this.latlng;
+		};
 
-		map.setZoom( 16 );
+		CustomMarker.prototype.onAdd = function() {
+			var projection = this.getProjection();
+			var center = projection.fromLatLngToContainerPixel( bounds.getCenter() );
+
+			center.y -= 60;
+
+			mymap.setCenter( projection.fromContainerPixelToLatLng( center ) );
+		};
+
+		new CustomMarker( latlng, mymap, {} );
+
+		bounds.extend( latlng );
+
+		mymap.setZoom( 16 );
 	};
 })( jQuery );
