@@ -10,8 +10,8 @@ if ( 'undefined' === typeof window.usr ) {
 		markers: [
 			{
 				position: {
-					lat: 44.4661197,
-					lng: 26.0801968
+					lat: 44.4373056,
+					lng: 26.0660234
 				}
 			}
 		]
