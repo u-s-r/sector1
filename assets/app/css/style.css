@@ -435,4 +435,16 @@
             transform: translateY(0) rotate(-45deg);
   }
 }
+.table-col-xs {
+  width: 5%;
+}
+.table-col-sm {
+  width: 10%;
+}
+.table-col-md {
+  width: 15%;
+}
+.table-col-lg {
+  width: 20%;
+}
 /*# sourceMappingURL=style.css.map */
