@@ -93,12 +93,10 @@
   background-color: #009eeb;
   color: #fff;
 }
-.section-primary a {
-  color: #fff;
-}
+.section-primary a,
 .section-primary a:hover,
 .section-primary a:focus {
-  color: #ccecfa;
+  color: #fff;
 }
 .section-primary .divider {
   border-color: #0088ca;
@@ -223,7 +221,7 @@
   margin-right: auto;
 }
 .divider-danger {
-  border-color: #f41215;
+  border-color: #f41215 !important;
 }
 .list {
   list-style: none;
