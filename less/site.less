@@ -89,8 +89,9 @@
 	padding-top: 60px;
 }
 
-.section-alt {
-	background-color: #ebf1f2;
+.section-sm {
+	padding-bottom: 30px;
+	padding-top: 30px;
 }
 
 .section-primary {
@@ -108,6 +109,29 @@
 
 	.divider {
 		border-color: #0088ca;
+	}
+}
+
+.section-secondary {
+	background-color: #ebf1f2;
+
+	.divider {
+		border-color: #ddd;
+	}
+}
+
+.section-inverted {
+	background-color: #131313;
+	color: #777;
+
+	a {
+		color: #bbb;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -298,39 +322,19 @@
 }
 
 .footer {
-	background-color: #0088ca;
-	color: #fff;
 	text-align: center;
-
-	a {
-		color: #fff;
-
-		&:hover,
-		&:focus {
-			color: #ccecfa;
-		}
-	}
 
 	.section-title {
 		font-size: 80px;
 	}
 
-	.divider {
-		border-color: #009eeb;
+	.menu {
+		font-size: 16px;
+		margin-bottom: 30px;
 	}
 
-	.text-muted {
-		color: #80d0f4;
-	}
-
-	.btn-default {
-		color: #0088ca;
-
-		&:hover,
-		&:focus {
-			background-color: #ccecfa;
-			color: #0088ca;
-		}
+	.section-secondary {
+		background-image: url('../img/bg-tile.png');
 	}
 }
 
@@ -350,8 +354,6 @@
 	}
 
 	a {
-		color: inherit;
-
 		&:hover,
 		&:focus {
 			text-decoration: none;

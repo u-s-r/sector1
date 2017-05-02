@@ -85,8 +85,9 @@
   padding-bottom: 60px;
   padding-top: 60px;
 }
-.section-alt {
-  background-color: #ebf1f2;
+.section-sm {
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 .section-primary {
   background-color: #009eeb;
@@ -101,6 +102,24 @@
 }
 .section-primary .divider {
   border-color: #0088ca;
+}
+.section-secondary {
+  background-color: #ebf1f2;
+}
+.section-secondary .divider {
+  border-color: #ddd;
+}
+.section-inverted {
+  background-color: #131313;
+  color: #777;
+}
+.section-inverted a {
+  color: #bbb;
+}
+.section-inverted a:hover,
+.section-inverted a:focus {
+  color: #fff;
+  text-decoration: none;
 }
 .section-carousel.slick-dotted.slick-slider {
   margin-bottom: 0;
@@ -251,33 +270,17 @@
   margin-bottom: 10px;
 }
 .footer {
-  background-color: #0088ca;
-  color: #fff;
   text-align: center;
-}
-.footer a {
-  color: #fff;
-}
-.footer a:hover,
-.footer a:focus {
-  color: #ccecfa;
 }
 .footer .section-title {
   font-size: 80px;
 }
-.footer .divider {
-  border-color: #009eeb;
+.footer .menu {
+  font-size: 16px;
+  margin-bottom: 30px;
 }
-.footer .text-muted {
-  color: #80d0f4;
-}
-.footer .btn-default {
-  color: #0088ca;
-}
-.footer .btn-default:hover,
-.footer .btn-default:focus {
-  background-color: #ccecfa;
-  color: #0088ca;
+.footer .section-secondary {
+  background-image: url("../img/bg-tile.png");
 }
 .fb-page {
   display: block !important;
@@ -291,9 +294,6 @@
   font-size: 75%;
   font-weight: 500;
   text-transform: uppercase;
-}
-.follow-us a {
-  color: inherit;
 }
 .follow-us a:hover,
 .follow-us a:focus {
