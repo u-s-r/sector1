@@ -435,6 +435,10 @@
             transform: translateY(0) rotate(-45deg);
   }
 }
+.table-middle > tbody > tr > td,
+.table-middle > tbody > tr > th {
+  vertical-align: middle;
+}
 .table-col-xs {
   width: 5%;
 }
