@@ -451,4 +451,11 @@
 .table-col-lg {
   width: 20%;
 }
+.nav-centered {
+  text-align: center;
+}
+.nav-centered > li {
+  display: inline-block;
+  float: none;
+}
 /*# sourceMappingURL=style.css.map */
