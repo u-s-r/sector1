@@ -3,6 +3,7 @@
 
 	var timer;
 	var $fb = $( '.fb-page' );
+	var $isotope = $( '.isotope' );
 
 	$( window ).on( 'load resize', function() {
 		if ( ! timer ) {
@@ -14,9 +15,29 @@
 				timer = null;
 			}, 300 );
 		}
-	} );
+	});
 
 	$( '.context-height .eq-height' ).matchHeight();
+
+	$( document ).ready( function() {
+		$isotope.isotope({
+			itemSelector: '.col-sm-4',
+			layoutMode: 'fitRows'
+		});
+	});
+
+	$( '[data-trigger="filter"]' ).click( function( event ) {
+		var $this = $( this );
+		var $parent = $this.parent();
+
+		event.preventDefault();
+
+		$parent.addClass( 'active' ).siblings().removeClass( 'active' );
+
+		$isotope.isotope({
+			filter: $this.data( 'target' )
+		});
+	});
 
 	$( '.section-carousel' ).slick({
 		autoplay: true,
