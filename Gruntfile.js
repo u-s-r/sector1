@@ -108,6 +108,12 @@ module.exports = function( grunt ) {
 				files: [
 					{
 						expand: true,
+						cwd: 'node_modules/font-awesome',
+						src: [ 'css/*', 'fonts/*' ],
+						dest: 'assets/vendor/font-awesome'
+					},
+					{
+						expand: true,
 						cwd: 'node_modules/jquery/dist',
 						src: '*',
 						dest: 'assets/vendor/jquery'
@@ -155,6 +161,7 @@ module.exports = function( grunt ) {
 				force: true
 			},
 			assets: [
+				'assets/vendor/font-awesome',
 				'assets/vendor/jquery',
 				'assets/vendor/jquery-match-height',
 				'assets/vendor/slick'

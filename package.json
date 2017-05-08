@@ -48,6 +48,7 @@
     "time-grunt": "^1.4.0"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "jquery": "^1.12.4",
     "jquery-match-height": "^0.7.2",
     "slick-carousel": "^1.6.0"
