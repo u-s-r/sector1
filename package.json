@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "isotope-layout": "^3.0.4",
     "jquery": "^1.12.4",
     "jquery-match-height": "^0.7.2",
     "slick-carousel": "^1.6.0"

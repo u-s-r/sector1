@@ -114,6 +114,12 @@ module.exports = function( grunt ) {
 					},
 					{
 						expand: true,
+						cwd: 'node_modules/isotope-layout/dist',
+						src: '*',
+						dest: 'assets/vendor/isotope'
+					},
+					{
+						expand: true,
 						cwd: 'node_modules/jquery/dist',
 						src: '*',
 						dest: 'assets/vendor/jquery'
@@ -162,6 +168,7 @@ module.exports = function( grunt ) {
 			},
 			assets: [
 				'assets/vendor/font-awesome',
+				'assets/vendor/isotope',
 				'assets/vendor/jquery',
 				'assets/vendor/jquery-match-height',
 				'assets/vendor/slick'
