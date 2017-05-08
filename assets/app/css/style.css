@@ -457,4 +457,7 @@
   display: inline-block;
   float: none;
 }
+.media-object {
+  max-width: 8rem;
+}
 /*# sourceMappingURL=style.css.map */
