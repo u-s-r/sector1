@@ -1,3 +1,20 @@
+# Ignore configuration files that may contain sensitive information
+wp-config.php
+
+# Ignore paths that contain user-generated content
+wp-content/cache/*
+!wp-content/cache
+!wp-content/cache/blogs.php
+wp-content/cache/page_enhanced/*
+!wp-content/cache/page_enhanced
+!wp-content/cache/page_enhanced/.htaccess
+wp-content/cache/minify/*
+!wp-content/cache/minify
+!wp-content/cache/minify/.htaccess
+wp-content/upgrade
+wp-content/uploads
+wp-content/w3tc-config
+
 # OS generated files
 ._*
 .DS_Store
